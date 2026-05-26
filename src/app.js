@@ -2,22 +2,31 @@ const express = require("express")
 
 const app = express()
 
-app.use((req,res)=>{
+const userData = [{
+    firstName : "rahul",
+    lastName :"garud",
+}]
+
+// app.get("/user",(req,res)=>{
+//     res.send(userData)
+// })
+
+// app.post("/user",(req,res)=>{
+//     res.send("save the data to db")
+// })
+
+// app.put("/user",(req,res)=>{
+//     res.send({firstName:"Virat",lastName:"kohli"})
+// })
+
+app.delete("/user",(req,res)=>{
+    res.send(userData)
+})
+ 
+app.use("/",(req,res)=>{
     res.send("Helllo from the server")
 })
 
-app.use("/",(req,res)=>{
-    res.send("hello from rahul")
-})
-
-app.use("/hello",(req,res)=>{
-    res.send("hello ")
-})
-
-app.use("/test",(req,res)=>{
-    res.send("hello from test")
-})
-
 app.listen(4000,()=>{
-    console.log("server is 304000000 on")
+    console.log("server is 4000 on")
 })
