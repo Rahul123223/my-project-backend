@@ -15,9 +15,6 @@ const userData = [{
 //     res.send("save the data to db")
 // })
 
-// app.put("/user",(req,res)=>{
-//     res.send({firstName:"Virat",lastName:"kohli"})
-// })
 
 app.delete("/user",(req,res)=>{
     res.send(userData)
